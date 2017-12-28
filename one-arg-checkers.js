@@ -12,7 +12,7 @@ exports.true = function checkTrue(expr) {
 };
 
 exports.ip = function ip(expr) {
-  if (!validator.isIp(expr)) {
+  if (!validator.isIP(expr)) {
     return `${expr} is not IP`;
   }
 };
