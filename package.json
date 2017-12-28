@@ -1,0 +1,28 @@
+{
+  "name": "debug-assert",
+  "version": "0.0.1",
+  "description": "Set of assertions which work if DEBUG_ASSERT environment variable is set.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dzenly/debug-assert.js.git"
+  },
+  "keywords": [
+    "conditional",
+    "assert",
+    "validator"
+  ],
+  "author": "Dzenly <alexchem@yandex.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dzenly/debug-assert.js/issues"
+  },
+  "homepage": "https://github.com/Dzenly/debug-assert.js#readme",
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "validator": "^9.2.0"
+  }
+}
