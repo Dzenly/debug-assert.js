@@ -14,12 +14,11 @@ npm i debug-assert [-S]
 ```js
 // These assertions are checked always.
 const dAssert = require('debug-assert');
+dAssert.true(expressionToCheckForTrue, messageForFailedAssertion);
 
 // These assertions are checked if DEBUG_ASSERT env variable is set.
 const dAssertCond = dAssert.cond;
-
-assert.true(expressionToCheckForTrue, messageForFailedAssertion);
-
+dAssertCond.true(expressionToCheckForTrue, messageForFailedAssertion);
 ```
 
 # Logging passed assertions
