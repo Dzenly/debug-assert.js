@@ -49,30 +49,6 @@ if (process.env.DEBUG_ASSERT_LOG_PASSED) {
   }
 }
 
-// /**
-//  * Checks if expr is true.
-//  * @param expr - expression to check for true.
-//  * @param [message = ''] - message to print in case of assertion fail.
-//  */
-// exports.true = function checkTrue(expr, message = '') {
-//   if (expr) {
-//     return;
-//   }
-//   throwError(callsite(), message);
-// };
-//
-// /**
-//  * Checks if expr is true.
-//  * @param expr - expression to check for ip v4 or v6.
-//  * @param [message = ''] - message to print in case of assertion fail.
-//  */
-// exports.ip = function ip(expr, message = '') {
-//   if (!validator.isIP(expr)) {
-//     return;
-//   }
-//   throwError(callsite(), message);
-// };
-
 Object.keys(oneArgCheckers)
   .forEach(function (key) {
 
@@ -115,6 +91,7 @@ Object.keys(twoArgsCheckers)
 // or to empty functions, if DEBUG_ASSERT is not set.
 if (process.env.DEBUG_ASSERT) {
   exports.cond = exports;
+  delete exports.cond.setLogger;
 } else {
   exports.cond = {}; // Object for conditional checks.
   Object.keys(exports)

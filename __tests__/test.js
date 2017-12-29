@@ -13,6 +13,8 @@ function foo() {
   dAssert.true(1 === 3, '1 must be equal to 3');
 }
 
+dAssert.
+
 function bar() {
   foo();
 }
