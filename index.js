@@ -100,7 +100,7 @@ Object.keys(twoArgsCheckers)
 
     if (typeof twoArgsCheckers[key] === 'function') {
       exports[key] = function (arg1, arg2, userMsg = '') {
-        const result = twoArgCheckers[key](arg1, arg2);
+        const result = twoArgsCheckers[key](arg1, arg2);
         if (typeof result === 'string') {
           throwError(callsite(), result, userMsg);
         }

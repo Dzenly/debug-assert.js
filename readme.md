@@ -1,6 +1,6 @@
 # What is this.
 
-This is an assertion library, like built in node.js assert module, but:
+This is an assertion library, like built in node.js `assert` module, but:
 
 * Prints the whole source string containing assertion (like https://www.npmjs.com/package/better-assert).
 * Contains much more checks. We are going to support many checks from https://www.npmjs.com/package/validator.
@@ -19,12 +19,15 @@ const dAssert = require('debug-assert');
 const dAssertCond = dAssert.cond;
 
 assert.true(expressionToCheckForTrue, messageForFailedAssertion);
+
 ```
 
-// Also you can use DEBUG_ASSERT_LOG_PASSED env var to log passed asertions.
-// use dAssert.setLogger() method to set some logger (like winston) and
-// silly level will be used for passed assertions.
-// If no logger is set, logs will be printed by console.log().
+# Logging passed assertions
+
+* Set DEBUG_ASSERT_LOG_PASSED env var.
+* Use `setLogger()` method to set some logger (like winston) and silly level will be used for passed assertions.
+* If no logger is set, logs will be printed by console.log().
+
 
 # Known Issues
 
