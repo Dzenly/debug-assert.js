@@ -11,7 +11,7 @@ npm i debug-assert [-S]
 
 # Usage
 
-> https://github.com/Dzenly/debug-assert.js/tree/master/__tests__/
+`https://github.com/Dzenly/debug-assert.js/tree/master/__tests__/`
 
 # Conditional assertions.
 
@@ -19,7 +19,7 @@ You can use `require(debug-assert).conditional` object
 to create conditional assertions
 which work when you set DEBUG_ASSERT env var to some non empty value. 
 
-> https://github.com/Dzenly/debug-assert.js/blob/master/__tests__/test-cond.js
+`https://github.com/Dzenly/debug-assert.js/blob/master/__tests__/test-cond.js`
 
 # Logging passed assertions
 
