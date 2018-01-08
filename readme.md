@@ -11,7 +11,7 @@ npm i debug-assert [-S]
 
 # Usage
 
-> https://github.com/Dzenly/debug-assert.js/tree/master/__tests__
+> https://github.com/Dzenly/debug-assert.js/tree/master/__tests__/
 
 # Conditional assertions.
 
