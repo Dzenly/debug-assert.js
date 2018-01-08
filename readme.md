@@ -11,15 +11,7 @@ npm i debug-assert [-S]
 
 # Usage
 
-```js
-// These assertions are checked always.
-const dAssert = require('debug-assert');
-dAssert.true(expressionToCheckForTrue, messageForFailedAssertion);
-
-// These assertions are checked if DEBUG_ASSERT env variable is set.
-const dAssertCond = dAssert.cond;
-dAssertCond.true(expressionToCheckForTrue, messageForFailedAssertion);
-```
+https://github.com/Dzenly/debug-assert.js/tree/master/__tests__
 
 # Logging passed assertions
 

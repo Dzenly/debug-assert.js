@@ -86,18 +86,24 @@ Object.keys(twoArgsCheckers)
   });
 
 // =====================================================================
-//
+exports.conditional = {}; // Object for conditional checks.
+
 // Let's assign exports.cond to function from export if DEBUG_ASSERT is set,
 // or to empty functions, if DEBUG_ASSERT is not set.
 if (process.env.DEBUG_ASSERT) {
-  exports.cond = exports;
-  delete exports.cond.setLogger;
+
+  Object.keys(exports)
+    .forEach(function (key) {
+      if (key === 'setLogger') return;
+      if (typeof exports[key] === 'function') {
+        exports.conditional[key] = exports[key];
+      }
+    });
 } else {
-  exports.cond = {}; // Object for conditional checks.
   Object.keys(exports)
     .forEach(function (key) {
       if (typeof exports[key] === 'function') {
-        exports.cond[key] = function () {
+        exports.conditional[key] = function () {
         };
       }
     });

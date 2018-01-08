@@ -4,7 +4,7 @@
 process.env.DEBUG_ASSERT = 'yes';
 process.env.DEBUG_ASSERT_LOG_PASSED = 'yes';
 
-const dCondAssert = require('../index.js');
+const dCondAssert = require('../index.js').conditional;
 
 function foo() {
   dCondAssert.true(1 === 1, '1 must be equal to 1');
