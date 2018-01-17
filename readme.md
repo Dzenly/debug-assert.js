@@ -4,6 +4,7 @@ This is an assertion library, like built in node.js `assert` module, but:
 
 * Prints the whole source string containing assertion (like https://www.npmjs.com/package/better-assert).
 * Contains much more checks. We are going to support many checks from https://www.npmjs.com/package/validator.
+* Allows to print messages for passed assertions, using DEBUG_ASSERT_LOG_PASSED env var.
 
 ## Installation
 
