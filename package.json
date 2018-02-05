@@ -1,6 +1,6 @@
 {
   "name": "debug-assert",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Set of assertions which work if DEBUG_ASSERT environment variable is set.",
   "main": "index.js",
   "scripts": {
