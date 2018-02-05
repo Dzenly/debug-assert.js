@@ -10,6 +10,12 @@ declare namespace DebugAssertJs {
   interface AssertionFunctions {
 
     /**
+     * Throws error if called. So checks that this string of code is never reached.
+     * @param {string} [msg = ''] - Message to print if fail.
+     */
+    dontBeHere(msg = '') : void;
+
+    /**
      * Checks if the given expression is true.
      * @param condition - Conditional expression to check.
      * @param {string} [msg = ''] - Message to print if fail.

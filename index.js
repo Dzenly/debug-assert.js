@@ -49,6 +49,11 @@ if (process.env.DEBUG_ASSERT_LOG_PASSED) {
   }
 }
 
+exports.dontBeHere = function (userMsg = '') {
+  throwError(callsite(), 'dontBeHere assertion failed.', userMsg);
+  // There is no logPassed variant.
+};
+
 Object.keys(oneArgCheckers)
   .forEach(function (key) {
 
