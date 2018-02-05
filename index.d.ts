@@ -58,7 +58,7 @@ declare namespace DebugAssertJs {
     valueSameZero(actual: any, expected: any, msg = '') : void;
   }
 
-  interface Unconditional {
+  interface Unconditional extends AssertionFunctions {
     /**
      * Sets logger to log passed assertions.
      * If no logger will be set, console.log will be used.
