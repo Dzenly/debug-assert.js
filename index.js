@@ -19,12 +19,24 @@ function getSrcLine(stack) {
   return line;
 }
 
+function getSrcInfo(stack) {
+  const call = stack[1];
+  const file = call.getFileName();
+  const lineno = call.getLineNumber();
+  let src = fs.readFileSync(file, 'utf8');
+  const line = src.split('\n')[lineno - 1].trim();
+  return {
+    fileLineNo: `${file}: ${lineno}`,
+    line,
+  };
+}
+
 function throwError(stack, msg, userMsg) {
 
-  const line = getSrcLine(stack);
+  const { fileLineNo, line } = getSrcInfo(stack);
 
   const err = new AssertionError({
-    message: '\nMSG: ' + msg + '\nUSER MSG: ' + userMsg + '\nLINE: ' + line,
+    message: '\nMSG: ' + msg + '\nUSER MSG: ' + userMsg + '\nLINE: ' + line + '\nFILE: ' + fileLineNo,
     stackStartFunction: stack[0].getFunction(),
   });
 
